@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Avalie o PUC Maps</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+</head>
+<body>
+  <header>
+    <h1>PUC Maps</h1>
+    <!-- Ícone para abrir a sidebar -->
+    <div id="menu-icon" class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="lista.html">Lista de Locais</a></li>
+        <li><a href="ver-avaliacoes.html">Avaliações</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="avaliacao-container">
+    <h2>Nos Avalie!</h2>
+    <form id="avaliacaoForm">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required />
+
+      <label for="curso">Curso:</label>
+      <input type="text" id="curso" name="curso" required />
+
+      <label for="periodo">Período:</label>
+      <input type="text" id="periodo" name="periodo" required />
+
+      <label for="nota">Nota (0 a 10):</label>
+      <input type="number" id="nota" name="nota" min="0" max="10" required />
+
+      <label for="comentario">Comentários:</label>
+      <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+      <button type="submit">Enviar Avaliação</button>
+    </form>
+
+    <p id="mensagem" style="text-align:center; margin-top:15px;"></p>
+
+    <!-- Link para ver avaliações -->
+    <div style="text-align:center; margin-top:20px;">
+      <a href="ver-avaliacoes.html" class="ver-avaliacoes-link">Ver avaliações recebidas</a>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - PUC Minas • Unidade Coração Eucarístico</p>
+  </footer>
+
+  <script src="../assets/js/aval.js" defer></script>
+</body>
+</html>

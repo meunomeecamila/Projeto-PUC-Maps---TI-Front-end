@@ -1,0 +1,110 @@
+[
+  {
+    "nome": "Posto Médico",
+    "descricao": "O posto médico da faculdade é uma unidade de apoio à saúde voltada para atender estudantes, professores e funcionários da instituição. No local, são oferecidos atendimentos ambulatoriais de baixa complexidade, como primeiros socorros, aferição de pressão, curativos, administração de medicamentos e orientações de saúde. Além disso, é comum oferecer campanhas de vacinação, ações de prevenção e encaminhamentos para serviços externos quando necessário, promovendo o bem-estar da comunidade acadêmica.",
+    "coords": [-19.9231362, -43.9934320],
+    "filtro":"Ajuda"
+  },
+  {
+    "nome": "Mata da PUC",
+    "descricao":"Um refúgio natural dentro do campus, a Mata da PUC é uma área de preservação ambiental que oferece um ambiente tranquilo para estudos ao ar livre, caminhadas relaxantes e observação da fauna e flora local. É um espaço verde essencial para o bem-estar e a conexão com a natureza, além de ser utilizada para pesquisas e atividades acadêmicas relacionadas à biologia e ecologia.",
+    "coords": [-19.9198836, -43.9919839],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Biblioteca",
+    "descricao":"A biblioteca da PUC é um espaço dedicado ao apoio ao ensino, pesquisa e aprendizado. Oferece um acervo variado de livros, periódicos, trabalhos acadêmicos e materiais digitais, disponível para consulta local ou empréstimo. Além disso, o ambiente é preparado para estudo individual ou em grupo, com acesso à internet e computadores. A equipe da biblioteca também auxilia na busca por informações, normalização de trabalhos acadêmicos e uso adequado das bases de dados e recursos informacionais.",
+    "coords": [-19.9209855, -43.9932275],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Prédio 43",
+    "descricao":"O prédio 43 é onde ocorrem as aulas dos cursos do ICEI (Instituto de Ciências Exatas e Informática), composto por 4 andares que tem aula para mais de 7 cursos possuindo também no primeiro andar 1 auditório, o Núcleo de Apoio a Inclusão – SECAC, e a Assessoria de Relações Internacionais – SEPLAN.",
+    "coords": [-19.9235536, -43.9933824],
+    "filtro":"Prédio"
+  },
+  {
+    "nome": "Prédio 34",
+    "descricao":"O prédio 34 serve de laboratório para os cursos do ICEI (Instituto de Ciências Exatas e Informática), com mais de 15 salas possuindo 20 ou mais computadores para os alunos poderem ter aulas e espaço para realizarem suas atividades. Além do mais, conta com a secretaria dos cursos e o Centro de Registros Computacionais – CRC.",
+    "coords": [-19.9231000, -43.9943745],
+    "filtro":"Prédio"
+  },
+  {
+    "nome": "Teatro João Paulo II",
+    "descricao":"Teatro localizado nas dependências da PUC Minas - Coração Eucarístico, com capacidade para 441 pessoas. Utilizado para diversas formaturas e também para palestras que são para mais cursos ou para até mesmo pessoas fora da PUC Minas.",
+    "coords": [-19.9232346, -43.9910261],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "DCE",
+    "descricao":"O Diretório Central dos Estudantes (DCE) é a principal entidade representativa dos alunos da instituição. Seu papel é defender os direitos estudantis, promover o diálogo entre os estudantes e a administração da faculdade, e incentivar a participação política, acadêmica, cultural e social da comunidade universitária. O DCE organiza eventos, debates, campanhas de conscientização, atividades esportivas e culturais, além de apoiar iniciativas estudantis. Também atua na mediação de demandas e na busca por melhorias nas condições de ensino, infraestrutura e serviços oferecidos aos alunos.",
+    "coords": [-19.9235252, -43.9939423],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Complexo Esportivo",
+    "descricao":"O Complexo Esportivo da PUC Minas é o coração das atividades físicas e recreativas do campus. Com quadras poliesportivas, campo de futebol, piscina e academia, oferece uma infraestrutura completa para a prática de diversas modalidades esportivas. É o lugar ideal para estudantes, professores e funcionários manterem a forma, participarem de campeonatos universitários e desfrutarem de momentos de lazer e integração.",
+    "coords": [-19.9215208, -43.9914368],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Museu de Ciencias Naturais",
+    "descricao":"Um tesouro de conhecimento e descoberta, o Museu de Ciências Naturais da PUC Minas abriga vastas coleções nas áreas de paleontologia, zoologia e botânica. Com exposições interativas e educativas, o museu é um centro de pesquisa e divulgação científica, proporcionando uma imersão fascinante na história natural e na biodiversidade do nosso planeta. É um recurso valioso para a comunidade acadêmica e para o público em geral.",
+    "coords": [-19.9220444, -43.9898167],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "DAcc",
+    "descricao":"Exclusivo para os alunos do curso, este espaço moderno e colaborativo oferece um ambiente ideal para estudo, projetos e networking. Conta com sala de estudo, área de convivência com café, e videogame para momentos de relaxamento e integração entre os futuros profissionais da tecnologia.",
+    "coords": [-19.9238634, -43.9951017],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Ultra Coffee",
+    "descricao":"O Ultra Coffee é o ponto de encontro perfeito para uma pausa estratégica no dia a dia universitário. Com um ambiente moderno e aconchegante, oferece uma variedade de cafés especiais, bebidas quentes e frias, além de lanches e doces deliciosos. Ideal para reuniões rápidas, estudos em grupo ou simplesmente para recarregar as energias com uma boa xícara de café.",
+    "coords": [-19.9240860, -43.9914723],
+    "filtro":"Alimentação"
+  },
+  {
+    "nome": "Portaria 7",
+    "descricao":" A Portaria 7 serve como um acesso secundário ao campus da PUC Minas, proporcionando uma alternativa de entrada e saída, especialmente para quem transita por essa área específica da universidade. Embora com menor fluxo que as portarias principais, oferece praticidade e segurança, contribuindo para a fluidez do trânsito de pessoas dentro e fora do campus.",
+    "coords": [-19.9250130, -43.9946920],
+    "filtro":"Portaria"
+  },
+  {
+    "nome": "Papelaria",
+    "descricao":"Essencial para a vida acadêmica, a Papelaria da PUC Minas oferece uma vasta gama de materiais didáticos, artigos de papelaria, suprimentos para escritório e serviços de impressão. De cadernos e canetas a materiais específicos para projetos, você encontrará tudo o que precisa para seus estudos e trabalhos. Um local prático e completo para suas necessidades diárias.",
+    "coords": [-19.9234152, -43.9937720],
+    "filtro":"Ajuda"
+  },
+  {
+    "nome": "Trailer",
+    "descricao":"Uma opção prática e saborosa para refeições rápidas e descontraídas no campus, o Restaurante Trailer oferece uma variedade de lanches, sanduíches, salgados e bebidas. Com um serviço ágil e um ambiente informal, é ideal para quem busca uma refeição gostosa sem perder muito tempo, perfeito para um almoço entre aulas ou um lanche à tarde.",
+    "coords": [-19.9238256, -43.9940650],
+    "filtro":"Alimentação"
+  },
+  {
+    "nome": "Centro de Espiritualidade",
+    "descricao":"O Centro de Espiritualidade da PUC Minas é um espaço acolhedor e ecumênico dedicado à reflexão, meditação e busca interior. Aberto a todas as crenças, oferece um ambiente de paz para a comunidade universitária encontrar momentos de serenidade, participar de celebrações religiosas, grupos de oração ou simplesmente desfrutar de um tempo de quietude em meio à rotina agitada.",
+    "coords": [-19.9240396, -43.9919896],
+    "filtro":"Entretenimento"
+  },
+  {
+    "nome": "Banco Santander",
+    "descricao":"Convenientemente localizado dentro do campus, a agência do Banco Santander oferece todos os serviços bancários essenciais para a comunidade universitária. De abertura de contas a transações financeiras, caixas eletrônicos e consultoria, proporciona facilidade e segurança para estudantes, professores e funcionários gerenciarem suas finanças sem precisar sair da universidade.",
+    "coords": [-19.9246193, -43.9932540],
+    "filtro":"Ajuda"
+  },
+  {
+    "nome": "Portaria 4",
+    "descricao":"A Portaria 4 é um dos principais pontos de acesso e saída do campus da PUC Minas. Localizada estrategicamente, é uma entrada de grande fluxo que conecta a universidade à malha urbana circundante, oferecendo comodidade para quem chega de carro, transporte público ou a pé. Um ponto de referência importante para visitantes e para a comunidade acadêmica em geral.",
+    "coords": [-19.9244507, -43.9914515],
+    "filtro":"Portaria"
+  },
+  {
+    "nome": "Prédio 47",
+    "descricao":"O Instituto de Ciências Sociais (ICS) da PUC Minas é o coração dos estudos e pesquisas nas áreas de Ciências Sociais, como Sociologia, Ciência Política, Antropologia, Serviço Social e Relações Internacionais. Abrangendo diversas salas de aula, auditórios e centros de pesquisa, o ICS é um polo de discussão crítica e produção de conhecimento sobre as complexidades da sociedade. É um ambiente dinâmico que estimula o debate, a reflexão e a formação de profissionais engajados na compreensão e transformação social.",
+    "coords": [-19.9250473, -43.9934276],
+    "filtro":"Prédio"
+  }
+]

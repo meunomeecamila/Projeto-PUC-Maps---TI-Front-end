@@ -1,0 +1,63 @@
+[
+  {
+    "id": "bocadoforno",
+    "nome": "Lanchonete Boca do Forno",
+    "cardapio": {
+      "Salgados": [
+        "Coxinha de frango - R$ 10,20",
+        "Coxinha de frango com catupiry - R$ 12,60",
+        "Quibe com catupiry - R$ 15,00",
+        "Risole de milho com catupiry - R$ 12,60"
+      ],
+      "Assados": [
+        "Enrolado de presunto e mussarela - R$ 17,40",
+        "Pastel assado frango com catupiry - R$ 13,80",
+        "Folhado de queijo - R$ 13,80",
+        "Bauru assado - R$ 15,00"
+      ],
+       "Doces": [
+        "Brigadeiro (25 unidades) - R$ 42,25",
+        "Beijinho recheado com Nutella (25 unidades) - R$ 79,00",
+        "Docinho de Churros (25 unidades)- R$ 50,75",
+        "Moranguinho (25 unidades) - R$ 49,75",
+        "Brigadeiro colorido Taça (25 unidades) - R$ 92,25",
+        "Brigadeiro de Colher (25 unidades)- R$ 92,25",
+        "Brigadeiro Oreo (25 unidades)- R$ 54,00"
+      ],
+       "Tortas Doces": [
+        "Torta Boca do Forno - R$ 93,00",
+        "Torta Bolo de Limão - R$ 93,00",
+        "Torta Mousse de Limão - R$ 106,00",
+        "Torta Morango com Chantilly (Estação) - R$ 106,60"
+      ]
+    }
+  },
+  {
+    "id": "ultracoffee",
+    "nome": "Ultra Coffee",
+    "cardapio": {
+      "Cafés Gelados & Frapês": [
+        "Caffe Latte - R$ 11,95",
+        "Cappuccino - R$ 16,95",
+        "Vanilla Latte - R$ 16,95",
+        "Caffe Mocha - R$ 17,95",
+        "Caramel Macchiato - R$ 17,95",
+        "Caramel Flan Latte - R$ 19,95",
+        "Expresso Tonica - R$ 16,95",
+        "Cappuccino Suiço - R$ 17,95"
+      ],
+      "Ultra Blend Milkshakes": [
+        "Caramelo - R$ 14,95",
+        "Creme & Morango - R$ 16,95",
+        "Vanilla Creme - R$ 14,95",
+        "Double Chocolate - R$ 14,95",
+        "Matchá - R$ 17,95"
+      ],
+      "Tradicionais": [
+        "Chocolate Quente - R$ 10,95",
+        "Cappuccino - R$ 10,95",
+        "Cappuccino Suiço - R$ 12,95"
+      ]
+    }
+  }
+]

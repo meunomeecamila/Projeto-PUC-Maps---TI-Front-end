@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar Notícia - PUC MAPS</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+
+<body class="bg-light">
+    <!--Cabeçalho-->
+    <header>
+        <h1><strong>Puc Maps - Cadastrar Notícia</strong> </h1>
+        <!--Ícones da página-->
+        <div class="icons">
+          <a href="index.html"><i class="fas fa-home"></i></a>
+          <a href="#"><i class="fas fa-cog"></i></a>
+          <a href="noticias.html"><i class="fas fa-newspaper"></i></a>
+          <a href="favoritos.html"><i class="fa-solid fa-star"></i></a>
+        </div>
+    </header>
+
+  <div class="container py-5">
+    <form id="form-noticia" class="card p-4 shadow-sm bg-white rounded">
+      <div class="mb-3">
+        <label for="titulo" class="form-label">Título</label>
+        <input type="text" class="form-control" id="titulo" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="descricao" class="form-label">Descrição</label>
+        <input type="text" class="form-control" id="descricao" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="imagem" class="form-label">URL da Imagem</label>
+        <input type="text" class="form-control" id="imagem" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="data" class="form-label">Data</label>
+        <input type="date" class="form-control" id="data" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="descricaoCompleta" class="form-label">Descrição Completa</label>
+        <textarea class="form-control" id="descricaoCompleta" rows="5" required></textarea>
+      </div>
+
+     <button type="submit" class="btn btn-primary w-100" style="background-color: green; color: white;">Cadastrar Notícia</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('form-noticia').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const titulo = document.getElementById('titulo').value;
+      const descricao = document.getElementById('descricao').value;
+      const imagem = document.getElementById('imagem').value;
+      const data = document.getElementById('data').value;
+      const descricaoCompleta = document.getElementById('descricaoCompleta').value;
+
+      const novaNoticia = {
+        id: Date.now(),
+        titulo,
+        descricao,
+        imagem,
+        data,
+        "descricao-completa": descricaoCompleta
+      };
+
+      let noticias = JSON.parse(localStorage.getItem('noticias')) || [];
+      noticias.push(novaNoticia);
+      localStorage.setItem('noticias', JSON.stringify(noticias));
+
+      alert('Notícia cadastrada com sucesso!');
+      window.location.href = 'noticias.html';
+    });
+  </script>
+
+</body>
+</html>

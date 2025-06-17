@@ -1,0 +1,1035 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #75856f;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Ícone clicado */
+  .icons :hover {
+    color: #92a68a;
+  }
+  
+  /* Barra de pesquisa */
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .search-bar button {
+    background-color: #92a68a;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  @media (min-width: 600px) {
+    .search-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .search-bar input {
+      flex: 1;
+      margin-right: 1rem;
+    }
+  }
+  
+  /* Mapa */
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #bcc499;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+
+  /* Seção Sobre o PUC Maps */
+  .about-app {
+    padding: 2rem 1rem;
+    background-color: #f2f2f2; /* Mesmo fundo da barra de pesquisa para consistência */
+  }
+
+  .about-app h2 {
+    font-size: 1.8rem;
+    color: #75856f; /* Cor do cabeçalho para manter o tema */
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px; /* Limita a largura para melhor legibilidade */
+    margin: 0 auto;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas para estética */
+    border: 2px solid #92a68a; /* Borda verde para combinar com o tema */
+  }
+
+  @media (min-width: 600px) {
+    .about-content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 1; /* O texto ocupa o espaço restante */
+    }
+
+    .about-content img {
+      max-width: 300px; /* Limita o tamanho da imagem em telas maiores */
+    }
+  }
+
+  /* Anne */
+
+header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.icons i:hover {
+  color: #92a68a;
+}
+
+.icons a {
+  color: white;
+  font-size: 1.5rem;
+  margin: 0 0.75rem;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.icons a:hover {
+  color: #92a68a;
+}
+
+/* duas colunas */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+/* cards */
+.card {
+  background-color: #bcc499;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* imagem com cantos arredondados */
+.card-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.card-body {
+  background-color: #bcc499;
+  padding: 1rem;
+}
+
+.card-title {
+  color: #506266;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.card-text {
+  color: #7b8f8a;
+}
+
+.card-meta {
+  font-size: 0.9rem;
+  color: #506266;
+  margin-bottom: 0.5rem;
+}
+
+/* botões de zoom do Leaflet não ficarem fixos */
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 400; /* abaixo do cabeçalho (z-index: 1000) */
+}
+
+.leaflet-control-zoom {
+  top: 10px !important;
+  left: 10px !important;
+  position: absolute !important;
+}
+
+/* responsividade para os cards */
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .card-img {
+    height: auto;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+  }
+
+  .card-text,
+  .card-meta {
+    font-size: 0.95rem;
+  }
+}
+
+/* Cabeçalho */
+header {
+  background-color: #75856f;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+header a {
+  display: block;
+  margin-top: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+ul#favoritos-lista {
+  list-style: none;
+  padding: 0;
+}
+
+ul#favoritos-lista li {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+#cardapio-container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column; /* itens um embaixo do outro */
+}
+
+#cardapio-container ul {
+  list-style: none; /* remove as bolinhas */
+  padding: 0;
+}
+
+#cardapio-container li {
+  background-color: #f0f0f0;
+  margin: 8px 0;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+#cardapio-container li:hover {
+  background-color: #ddd;
+}
+
+#cardapio-container h2 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #75856f;
+}
+
+#cardapio-container h3.categoria {
+  color: #75856f;
+  margin-top: 20px;
+  border-bottom: 2px solid #75856f;
+  padding-bottom: 4px;
+}
+
+
+
+
+
+
+
+  
+  /* Cabeçalho */
+  header {
+    background-color: #75856f;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0;
+    color: white;
+  }
+  
+  header a {
+    display: block;
+    margin-top: 0.5rem;
+    color: white;
+    text-decoration: none;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  ul#lista-locais {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul#lista-locais li {
+    background-color: #ffffff;
+    border: 1px solid #c5e1c5;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 8px;
+  }
+
+ 
+  /* Remove sublinhado do link e faz ele ocupar toda a largura */
+.item-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Estilo da caixa do local */
+.item-local {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+  position: relative;
+  transition: background-color 0.2s;
+}
+
+.item-local:hover {
+  background-color: #f0f8f0;
+}
+
+/* Botão de Favorito */
+.btn-favorito {
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1.5rem; 
+    color: #aaa; 
+    transition: color 0.3s; 
+    position: absolute; 
+    top: 1rem; 
+    right: 1rem; 
+    z-index: 2; 
+    padding: 0; 
+}
+
+.btn-favorito.favorito {
+    color: #f3b400; 
+}
+
+.item-local {
+    position: relative;
+    padding-right: 2.5rem; 
+}
+
+.card-local {
+    position: relative; 
+    padding-right: 2.5rem; 
+}
+
+.item-link {
+    display: block; 
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Estilo para página de detalhes */
+#detalhes-local {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  border-radius: 8px;
+  padding: 2rem;
+  max-width: 700px;
+  margin: 2rem auto;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+#detalhes-local h2 {
+  font-size: 1.8rem;
+  color: #75856f;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+#detalhes-local p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+  text-align: justify;
+}
+
+/* Sprint 2 Saulo */
+
+
+.avaliacoes-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(117, 133, 111, 0.2);
+}
+
+.avaliacoes-container h1 {
+  text-align: center;
+  color: #75856f;
+  margin-bottom: 2rem;
+}
+
+/* Grid de cards */
+.avaliacoes-lista {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* Card individual */
+.avaliacao-item {
+  background-color: #fdfdfd;
+  border-left: 4px solid #b7c4a4;
+  padding: 1.2rem 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(117, 133, 111, 0.15);
+}
+
+.avaliacao-item p {
+  margin: 0.3rem 0;
+  color: #444;
+  line-height: 1.4;
+}
+
+.avaliacao-item strong {
+  color: #75856f;
+}
+
+.estrelas {
+  color: #f3b400;
+  font-size: 1.2rem;
+  margin: 0.5rem 0;
+}
+
+/* Seção da Caixa de Pesquisa */
+
+#pesquisa {
+    width: calc(100% - 2rem); /* Mantém a largura dinâmica */
+    padding: 0.8rem 1rem; 
+    margin: 0 1rem 1rem 1rem; 
+    
+    border: 1px solid #c5e1c5; 
+    border-radius: 25px; 
+    
+    font-size: 1rem;
+    background-color: white; 
+    color: #333; 
+    
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: all 0.3s ease-in-out; 
+}
+
+#pesquisa:focus {
+    border-color: #75856f; 
+    box-shadow: 0 0 0 3px rgba(117, 133, 111, 0.3); 
+    outline: none; 
+}
+
+#pesquisa::placeholder {
+    color: #888; 
+    opacity: 1; 
+}
+
+#pesquisa:hover {
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte ao passar o mouse */
+}
+
+/* Responsivo: 2 colunas no desktop */
+@media (min-width: 700px) {
+  .avaliacoes-lista {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+
+
+
+
+/*Sérgio*/
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  .voltar-link {
+    margin-bottom: 2rem;
+  }
+
+  .voltar-link a {
+    color: #75856f;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s;
+  }
+
+  .voltar-link a:hover {
+    color: #506266;
+  }
+
+  .noticia-detalhada {
+    background-color: #f9f9f9;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(117, 133, 111, 0.15);
+    overflow: hidden;
+    margin: 3rem auto;
+    max-width: 1200px;
+    padding: 2rem;
+  }
+
+  .noticia-detalhada .imagem-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .noticia-detalhada img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    margin: 0 auto;
+    display: block;
+    border: 5px solid #75856f;
+    transition: transform 0.3s ease;
+  }
+
+  .noticia-detalhada img:hover {
+    transform: scale(1.02);
+  }
+
+  .noticia-detalhada h2 {
+    color: #75856f;
+    font-size: 2.8rem;
+    margin: 2.5rem 2rem 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    letter-spacing: -0.5px;
+  }
+
+  .noticia-detalhada .data {
+    color: #506266;
+    font-size: 1.3rem;
+    margin: 1rem 2rem 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 3px solid #bcc499;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  .noticia-detalhada .descricao {
+    line-height: 1.9;
+    color: #506266;
+    font-size: 1.4rem;
+    margin: 2rem 3rem;
+    padding: 0 2rem;
+    text-align: justify;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Mantendo a responsividade para telas menores */
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .noticia-detalhada {
+      padding: 1rem;
+      margin: 1rem auto;
+    }
+
+    .noticia-detalhada h2 {
+      font-size: 1.5rem;
+      margin: 1.5rem 1rem 1rem;
+    }
+
+    .noticia-detalhada img {
+      height: 250px;
+    }
+
+    .noticia-detalhada .descricao {
+      font-size: 1.1rem;
+      margin: 1rem;
+      padding: 0 0.5rem;
+    }
+
+    .noticia-detalhada .data {
+      font-size: 1rem;
+      margin: 0.5rem 1rem 1rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .noticia-detalhada h2 {
+      font-size: 1.5rem;
+    }
+
+    .noticia-detalhada img {
+      height: 250px;
+    }
+  }
+
+  
+  /* Cabeçalho */
+  header {
+    background-color: #75856f;
+    color: white;
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .icons {
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .icons i {
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  /* Ícone clicado */
+  .icons :hover {
+    color: #92a68a;
+  }
+  
+  /* Barra de pesquisa */
+  .search-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+    background-color: #f2f2f2;
+  }
+  
+  .search-bar input,
+  .search-bar button {
+    padding: 0.5rem;
+    font-size: 1rem;
+    background-color: #92a68a;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Mapa */
+  #map {
+    height: 400px;
+    width: 100%;
+  }
+  
+  /* Rodapé */
+  footer {
+    background-color: #bcc499;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: auto;
+  }
+
+  /* Seção Sobre o PUC Maps */
+  .about-app {
+    padding: 2rem 1rem;
+    background-color: #f2f2f2; /* Mesmo fundo da barra de pesquisa para consistência */
+  }
+
+  .about-app h2 {
+    font-size: 1.8rem;
+    color: #75856f; /* Cor do cabeçalho para manter o tema */
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 800px; /* Limita a largura para melhor legibilidade */
+    margin: 0 auto;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+
+  .about-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; /* Bordas arredondadas para estética */
+    border: 2px solid #92a68a; /* Borda verde para combinar com o tema */
+  }
+
+  @media (min-width: 600px) {
+    .about-content {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+
+    .about-text {
+      flex: 1; /* O texto ocupa o espaço restante */
+    }
+
+    .about-content img {
+      max-width: 300px; /* Limita o tamanho da imagem em telas maiores */
+    }
+  }
+
+
+
+
+
+  @media (min-width: 600px) {
+    .search-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .search-bar input {
+      background-color: white;
+      color:black;
+      flex: 1;
+      margin-right: 1rem;
+    }
+  }
+  #ok{
+    background-color: rgb(170, 170, 170);
+  }
+  #ok, #filtro{
+    cursor: pointer;
+    display: inline ;
+    border: 2px solid transparent;
+    border-radius: 5px;
+  }
+  #ok:hover,  #filtro:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    border: 2px solid black;
+  }
+
+  .filtro{
+    background-color: #f2f2f2;
+    border: 1px solid gray;
+    width: 110px;
+    height:20px;
+    border-radius: 20px;
+    margin: 0.3rem 0.2rem 0.5rem 1rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  .filtro:hover{ /*Atualizei os botões feitos anteriormente adicionando animação ao passar o mouse*/
+    background-color: #b7b7b7;
+    border: 1px solid rgb(99, 99, 99);
+    transform: scale(1.05);
+  }
+  .fundo-bot{
+    background-color:#f2f2f2 ;
+  }
+
+  #box {
+    display: none;
+  }
+
+  /* Botão do menu */
+.menu-icon {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* Sidebar escondida */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* Escondida inicialmente */
+  width: 250px;
+  height: 100%;
+  background-color: #999b94;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li a {
+  display: block;
+  color: white;
+  padding: 15px 20px;
+  text-decoration: none;
+}
+
+.sidebar ul li a:hover {
+  background-color: #575757;
+}
+
+/* Botão de fechar */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.menu-icon i {
+  color: white; /* ou qualquer cor: #000, red, blue, etc */
+}
+
+#sidebar {
+  position: fixed; /* ou absolute, dependendo do seu layout */
+  z-index: 1100;  /* valor alto para ficar na frente */
+  /* outros estilos como largura, altura, top, left */
+}
+
+.leaflet-control-container {
+  z-index: 800; /* padrão do Leaflet */
+}
+
+.avaliacao-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #f1f1f1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.avaliacao-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.avaliacao-container label {
+  display: block;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.avaliacao-container input,
+.avaliacao-container textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.avaliacao-container button {
+  display: block;
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #547754;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.avaliacao-container button:hover {
+  background-color: #9ac3ab;
+}
+
+.card-local{  /*card da pagina de lista de lugares*/
+  background-color: #d0d0d0;
+  margin-top: 0.5%;
+  text-indent: 10px;
+}
+
+.card-rest{ /*card de restaurantes*/
+  background-color: #b4c3af;
+  margin: 1% 7%;
+  transition: transform 0.2s ease-in-out;
+}
+.card-rest a{  /*link do card restaurante*/
+  text-decoration: none;
+  color: black;
+  padding-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+
+.card-rest:hover{  /*card restaurante quando o mouse passar por cima*/
+  color: black;
+  background-color: #a2c398;
+  border: 1px solid black;
+  font-weight: bold;
+  transform: scale(1.05);
+}
+.cards-rest{ /*evitar as caracteristicas vindas do main{ }, que tornava diferente o style da pagina restaurante*/
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.rests{ /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
+  background-color: #d0d0d0;
+}
+#searchbar {
+  cursor: text;
+}

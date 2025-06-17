@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PUC Maps - Lista de Locais</title>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+</head>
+<body>
+  <header>
+    <h1>PUC Maps - Lista de Locais</h1>
+    <div class="icons">
+      <a href="favoritos.html"><i class="fas fa-star"></i></a>
+    </div>
+    <!-- Ícone para abrir a sidebar -->
+        <div id="menu-icon" class="menu-icon">
+        <i class="fas fa-bars"></i>
+        </div>
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="ver-avaliacoes.html">Avaliações</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <input type="text" id="pesquisa" placeholder="Pesquisar locais..." />
+    <div id="lista-locais" class="lista-container"></div>
+  </main>
+
+  <footer>
+    <p>© 2025 - PUC Minas • Unidade Coração Eucarístico</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <script type="module" src="../lista.js"></script>
+</body>
+</html>

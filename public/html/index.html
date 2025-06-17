@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PUC Maps</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <!--Fazer o link do fontawesome (ícones)-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <!--Fazer o link da biblioteca JS Leaflet (mapa)-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <!--Incluir o java script-->
+    <script src="../script.js" defer></script>
+</head>
+<body>
+    <!--Cabeçalho-->
+    <header>
+        <h1>PUC Maps</h1>
+        <!--Ícones da página-->
+        <div class="icons">
+            
+           <a href="noticias.html"><i class="fas fa-newspaper"></i></a>
+            <i class="fas fa-cog"></i>
+          </div>
+        </header>
+
+        <!-- Ícone para abrir a sidebar -->
+        <div id="menu-icon" class="menu-icon">
+        <i class="fas fa-bars"></i>
+        </div>
+
+        <!-- Barra lateral -->
+        <nav id="sidebar" class="sidebar">
+        <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+        <ul>
+          <li><a href="avaliacoes.html">Nos avalie!</a></li>
+          <li><a href="lista.html">Lista de Locais</a></li>
+          <li><a href="ver-avaliacoes.html">Avaliações</a></li>
+          <li><a href="cadastrar-noticias.html">Cadastrar Notícia</a></li>
+          <li><a href="restaurantes.html">Restaurantes</a></li>
+        </ul>
+        </nav>
+
+
+        <!--Barra de pesquisa + botão de filtros-->
+        <div class="search-bar">
+          <input type="text" placeholder="Buscar local..." id="searchbar" />
+          <button class="OK" id="ok">OK</button>
+          <button class="filter" id="filtro">Filtros</button>
+        </div>
+          <div id="box"> 
+            <div class='fundo-bot'><button class='filtro' id='Predio'>PRÉDIOS</button></div>
+            <div class='fundo-bot'><button class='filtro' id='Alimentacao'>Alimentação</button></div>
+            <div class='fundo-bot'><button class='filtro' id='entretenimento'>Entretenimento</button></div>
+            <div class='fundo-bot'><button class='filtro' id='ajuda'>Ajuda</button></div>
+          </div>
+
+        <!--Fazer uma div para o mapa incluído com leaflet-->
+        <div id="map"></div>
+
+        <!--Colocar informações sobre o app e img-->
+        <section class="about-app">
+            <h2>Sobre o PUC Maps</h2>
+            <div class="about-content">
+              <div class="about-text">
+                <p>O PUC Maps é uma ferramenta desenvolvida para facilitar a navegação pela PUC Minas, Unidade Coração Eucarístico. Com ele, você pode encontrar rapidamente locais como prédios, bibliotecas, áreas de lazer e serviços essenciais. Nosso objetivo é tornar sua experiência no campus mais prática e agradável.</p>
+                <p>Explore o mapa, use a barra de pesquisa para localizar pontos específicos e aplique filtros para personalizar sua visualização. Estamos sempre trabalhando para melhorar o aplicativo e trazer novas funcionalidades!</p>
+              </div>
+              <img src="../assets/images/campus.jpg" alt="Imagem do campus da PUC Minas">
+            </div>
+          </section>
+        
+        <!--Rodapé-->
+        <footer>
+            <p>&copy; 2025 - PUC Minas • Unidade Coração Eucarístico</p>
+          </footer>
+    
+</body>
+</html>

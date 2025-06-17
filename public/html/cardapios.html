@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cardápio</title>
+   <link rel="stylesheet" href="../assets/css/style.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    <header>
+    <h1>Cardápios</h1>
+    <div class="icons">
+      <a href="index.html"><i class="fas fa-home"></i></a>
+    </div>
+    </div>
+    <!-- Ícone para abrir a sidebar -->
+        <div id="menu-icon" class="menu-icon">
+        <i class="fas fa-bars"></i>
+        </div>
+    <!-- Barra lateral -->
+    <nav id="sidebar" class="sidebar">
+      <button id="close-sidebar" class="close-btn"><i class="fas fa-times"></i></button>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="avaliacoes.html">Nos avalie!</a></li>
+        <li><a href="noticias.html">Notícias</a></li>
+        <li><a href="ver-avaliacoes.html">Avaliações</a></li>
+        <li><a href="restaurantes.html">Restaurantes</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="cardapio-container">Carregando...</div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    fetch('../restaurantes.json')
+      .then(response => response.json())
+      .then(data => {
+        const restaurante = data.find(r => r.id === id);
+        const container = document.getElementById("cardapio-container");
+
+        if (restaurante) {
+          let html = `<h2>Cardápio de ${restaurante.nome}</h2>`;
+for (const categoria in restaurante.cardapio) {
+  html += `<h3 class="categoria">${categoria}</h3>`;
+  html += `<ul>`;
+  restaurante.cardapio[categoria].forEach(item => {
+    html += `<li>${item}</li>`;
+  });
+  html += `</ul>`;
+}
+container.innerHTML = html;
+
+        } else {
+          container.innerHTML = "<p>Cardápio não encontrado.</p>";
+        }
+      })
+      .catch(error => {
+        console.error("Erro ao carregar o JSON:", error);
+        document.getElementById("cardapio-container").innerHTML = "<p>Erro ao carregar o cardápio.</p>";
+      });
+  </script>
+  <script type="module" src="../cardapios.js"></script>
+</body>
+</html>

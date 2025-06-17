@@ -1,0 +1,28 @@
+{
+  "aval": [
+    {
+      "id": "1",
+      "nome": "Camila",
+      "curso": "Ciência da Computação",
+      "periodo": "1",
+      "nota": 10,
+      "comentario": "Muito bom"
+    },
+    {
+      "id": "2",
+      "nome": "João",
+      "curso": "Engenharia",
+      "periodo": "3",
+      "nota": 8,
+      "comentario": "Gostei, mas pode melhorar"
+    },
+    {
+      "id": "79a6",
+      "nome": "Camila",
+      "curso": "Ciência da Computação",
+      "periodo": "1",
+      "nota": 10,
+      "comentario": "top demais"
+    }
+  ]
+}

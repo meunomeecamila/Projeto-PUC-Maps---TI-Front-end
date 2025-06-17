@@ -1,0 +1,46 @@
+{
+    "noticias": [
+      {
+        "titulo": "PUC Aberta",
+        "data": "06/05-09/05 - PUC Minas Coreu",
+        "descricao": "O PUC Aberta é a oportunidade perfeita para você explorar os cursos oferecidos por uma das melhores universidades do mundo. Mais do que uma simples mostra de profissões...",
+        "descricao-completa":"O PUC Aberta é a oportunidade perfeita para você explorar os cursos oferecidos por uma das melhores universidades do mundo. Mais do que uma simples mostra de profissões, o evento oferece uma experiência imersiva, onde você pode conhecer a estrutura dos campi, conversar com professores e alunos e descobrir tudo que a PUC Minas tem a oferecer O evento acontecerá no mês de maio nos campi da PUC Minas e a programação conta com feira de cursos de graduação, palestras dos cursos, oficinas e visitas guiadas ao laboratórios. Será incrível.",
+        "imagem": "../assets/images/pucaberta.jpg"
+      },
+      {
+        "titulo": "Vacinação contra a gripe",
+        "data": "Abril e Maio 2025 - Sala 404 do Complexo Esportivo",
+        "descricao": "O Instituto de Ciências Biológicas e da Saúde da PUC Minas, por meio do Departamento de Enfermagem e em parceria com a Secretaria Municipal de Saúde de Belo Horizonte...",
+        "descricao-completa":"O Instituto de Ciências Biológicas e da Saúde da PUC Minas, por meio do Departamento de Enfermagem e em parceria com a Secretaria Municipal de Saúde de Belo Horizonte, promoverá de 29 de abril a 29 de maio, às terças, quartas e quintas, campanha de vacinação contra a gripe no Campus Coração Eucarístico. A vacinação é aberta ao público externo e todos acima de 6 meses de idade, em Minas Gerais, podem se vacinar. Saiba mais e confira todas as datas em: pucminas.br/vacina",
+        "imagem": "../assets/images/gripe.jpg"
+      },
+      {
+        "titulo": "Palestra Dom Serafim",
+        "data": "07/05 - Auditório 3",
+        "descricao": "A PUC Minas promoverá a palestra Dom Serafim, Cardeal Fernandes de Araújo - Construtor da Esperança, que será ministrada pelo Prof. Dr. Frei Luiz Antônio Pinheiro, OSA, com a...",
+        "descricao-completa":"A PUC Minas promoverá a palestra Dom Serafim, Cardeal Fernandes de Araújo - Construtor da Esperança, que será ministrada pelo Prof. Dr. Frei Luiz Antônio Pinheiro, OSA, com a participação do Reitor da PUC Minas, Prof. Dr. Pe. Luís Henrique Eloy e Silva. A homenagem compõe a programação de uma série de celebrações em Ação de Graças à memória de Dom Serafim, realizadas pela Arquidiocese de Belo Horizonte (@arquidiocesedebh) no período de 13 de agosto de 2024 a 13 de agosto de 2025, em datas que marcaram a história do Cardeal, como o dia de seu nascimento, seu falecimento, sua nomeação como Arcebispo Metropolitano de Belo Horizonte, sua Ordenação Presbiteral e Ordenação Episcopal. Dom Serafim foi Reitor da PUC Minas entre 1960 e 1981. Saiba mais: orbe.me/domserafim.",
+        "imagem": "../assets/images/palestra.jpg"
+      },
+      {
+        "titulo": "Sejam bem-vindos à PUC!",
+        "data": "12/04/2025 - Complexo Esportivo",
+        "descricao": "Venham para o evento de recepção de calouros, que terá muitas novidades e surpresas! Vocês poderão conhecer a universidade, fazer novas amizades e começar essa jornada...",
+         "descricao-completa":"Venham para o evento de recepção de calouros, que terá muitas novidades e surpresas! Vocês poderão conhecer a universidade, fazer novas amizades e começar essa jornada com muita energia. Esperamos todos vocês para um dia cheio de diversão! Os alunos que comparecerem terão a oportunidade de participar de atividades culturais e esportivas em três espaços da Universidade: Complexo Esportivo, Museu de Ciências Naturais e Planetário.",
+        "imagem": "../assets/images/boasvindas.jpg"
+      },
+      {
+        "titulo": "Comp Software Day",
+        "data": "21/03/2025 - Teatro PUC Minas",
+        "descricao": "Alunos da PUC Minas, não percam a palestra sobre a inauguração da nova Empresa Júnior, a COMP! Venham conhecer os projetos inovadores e as oportunidades que essa iniciativa...",
+        "descricao-completa":"Alunos da PUC Minas, não percam a palestra sobre a inauguração da nova Empresa Júnior, a COMP! Venham conhecer os projetos inovadores e as oportunidades que essa iniciativa traz para vocês. O Comp Software Day reuniu especialistas da área de tecnologia para discutir temas atuais e relevantes do setor de software. O evento contará com a apresentação de assuntos como Workshop Linkedin, palestra acerca do funcionamento do deepseek, premiação dos melhores trabalhos interdisciplinares, governança de IA entre outros assuntos relevantes na área tecnológica. A abordagem desses tópicos promoverá o intercâmbio de conhecimento entre estudantes, professores e profissionais do mercado.",
+        "imagem": "../assets/images/comp.jpg"
+      },
+      {
+        "titulo": "Festival de Primavera",
+        "data": "Data e local em @pastoralpucminas",
+        "descricao": "Combinando arte, cultura e criatividade, o festival promove encontros construídos a partir das relações humanas e do fazer artístico. É um espaço dedicado à criação e à expressão...",
+        "descricao-completa":"Combinando arte, cultura e criatividade, o festival promove encontros construídos a partir das relações humanas e do fazer artístico. É um espaço dedicado à criação e à expressão de talentos, valorizando obras originais produzidas por alunos, professores e funcionários da Instituição. Esse evento institucional busca enriquecer a formação profissional e humana de toda a comunidade universitária. As oficinas são gratuitas e abertas à participação de todos os membros da Universidade. Confira mais informações no instagram @pastoralpucminas",
+        "imagem": "../assets/images/festival.jpg"
+      }
+    ]
+  }

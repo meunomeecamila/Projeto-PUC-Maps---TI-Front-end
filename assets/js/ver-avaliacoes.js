@@ -1,14 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("avaliacoes-lista");
 
-  fetch("../json/aval.json")
+  fetch("../assets/json/aval.json")
     .then(response => {
       if (!response.ok) throw new Error("Erro ao carregar as avaliações");
       return response.json();
     })
     .then(data => {
-      const avaliacoes = data; // <- acessa corretamente o array
-
+      const avaliacoes = data.aval; // <- acessa corretamente o array
+      
       if (!avaliacoes || avaliacoes.length === 0) {
         container.innerHTML = "<p>Nenhuma avaliação encontrada.</p>";
         return;

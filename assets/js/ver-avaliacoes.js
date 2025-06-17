@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .then(data => {
       const avaliacoes = data.aval; // <- acessa corretamente o array
-      
+      debugger
       if (!avaliacoes || avaliacoes.length === 0) {
         container.innerHTML = "<p>Nenhuma avaliação encontrada.</p>";
         return;

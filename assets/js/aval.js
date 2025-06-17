@@ -1,6 +1,6 @@
 // aval.js
 document.addEventListener('DOMContentLoaded', function () {
-  const API_URL = '../json/aval.json';
+  const API_URL = '../assets/json/aval.json';
   const form = document.getElementById('avaliacaoForm');
   const mensagem = document.getElementById('mensagem');
 
@@ -150,4 +150,3 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.style.left = '-250px';
   });
 });
-

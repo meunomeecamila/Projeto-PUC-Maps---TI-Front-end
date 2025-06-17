@@ -1,7 +1,7 @@
 [
   {
     "nome": "Posto Médico",
-    "descricao": "O posto médico da faculdade é uma unidade de apoio à saúde voltada para atender estudantes, professores e funcionários da instituição. No local, são oferecidos atendimentos ambulatoriais de baixa complexidade, como primeiros socorros, aferição de pressão, curativos, administração de medicamentos e orientações de saúde. Além disso, é comum oferecer campanhas de vacinação, ações de prevenção e encaminhamentos para serviços externos quando necessário, promovendo o bem-estar da comunidade acadêmica.",
+    "descricao": "O posto médico da faculdade é uma unidade de apoio à saúde voltada para atender estudantes, professores e funcionários da instituição. No local, são oferecidos atendimentos ambulatoriais de baixa complexidade, como primeiros socorros, aferição de pressão, curativos e orientações de saúde. Além disso, é comum oferecer ações de prevenção e encaminhamentos para serviços externos quando necessário, promovendo o bem-estar da comunidade acadêmica.",
     "coords": [-19.9231362, -43.9934320],
     "filtro":"Ajuda"
   },

@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.getElementById("avaliacoes-lista");
 
-  fetch("http://localhost:3000/aval")
+  fetch("../json/aval.json")
     .then(response => {
       if (!response.ok) throw new Error("Erro ao carregar as avaliações");
       return response.json();

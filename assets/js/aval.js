@@ -1,6 +1,6 @@
 // aval.js
 document.addEventListener('DOMContentLoaded', function () {
-  const API_URL = 'http://localhost:3000/aval';
+  const API_URL = '../json/aval.json';
   const form = document.getElementById('avaliacaoForm');
   const mensagem = document.getElementById('mensagem');
 

@@ -1,154 +1,161 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
-  body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: Arial, sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Cabeçalho */
-  header {
-    background-color: #75856f;
-    color: white;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .icons {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .icons i {
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  /* Ícone clicado */
-  .icons :hover {
-    color: #92a68a;
-  }
-  
-  /* Barra de pesquisa */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabeçalho */
+header {
+  background-color: #75856f;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Ícone clicado */
+.icons :hover {
+  color: #92a68a;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+.search-bar input,
+.search-bar button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background-color: #92a68a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media (min-width: 600px) {
   .search-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: #f2f2f2;
-  }
-  
-  .search-bar input,
-  .search-bar button {
-    padding: 0.5rem;
-    font-size: 1rem;
-  }
-  
-  .search-bar button {
-    background-color: #92a68a;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  @media (min-width: 600px) {
-    .search-bar {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .search-bar input {
-      flex: 1;
-      margin-right: 1rem;
-    }
-  }
-  
-  /* Mapa */
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #bcc499;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    margin-top: auto;
-  }
-
-  /* Seção Sobre o PUC Maps */
-  .about-app {
-    padding: 2rem 1rem;
-    background-color: #f2f2f2; /* Mesmo fundo da barra de pesquisa para consistência */
-  }
-
-  .about-app h2 {
-    font-size: 1.8rem;
-    color: #75856f; /* Cor do cabeçalho para manter o tema */
-    text-align: center;
-    margin-bottom: 1.5rem;
-  }
-
-  .about-content {
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    gap: 1rem;
-    max-width: 800px; /* Limita a largura para melhor legibilidade */
-    margin: 0 auto;
+  }
+
+  .search-bar input {
+    flex: 1;
+    margin-right: 1rem;
+  }
+}
+
+/* Mapa */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Rodapé */
+footer {
+  background-color: #bcc499;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Seção Sobre o PUC Maps */
+.about-app {
+  padding: 2rem 1rem;
+  background-color: #f2f2f2;
+  /* Mesmo fundo da barra de pesquisa para consistência */
+}
+
+.about-app h2 {
+  font-size: 1.8rem;
+  color: #75856f;
+  /* Cor do cabeçalho para manter o tema */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  /* Limita a largura para melhor legibilidade */
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Bordas arredondadas para estética */
+  border: 2px solid #92a68a;
+  /* Borda verde para combinar com o tema */
+}
+
+@media (min-width: 600px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .about-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
+    flex: 1;
+    /* O texto ocupa o espaço restante */
   }
 
   .about-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas para estética */
-    border: 2px solid #92a68a; /* Borda verde para combinar com o tema */
+    max-width: 300px;
+    /* Limita o tamanho da imagem em telas maiores */
   }
+}
 
-  @media (min-width: 600px) {
-    .about-content {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-
-    .about-text {
-      flex: 1; /* O texto ocupa o espaço restante */
-    }
-
-    .about-content img {
-      max-width: 300px; /* Limita o tamanho da imagem em telas maiores */
-    }
-  }
-
-  /* Anne */
+/* Anne */
 
 header h1 {
   font-size: 1.8rem;
@@ -239,7 +246,8 @@ header h1 {
 /* botões de zoom do Leaflet não ficarem fixos */
 .leaflet-top,
 .leaflet-bottom {
-  z-index: 400; /* abaixo do cabeçalho (z-index: 1000) */
+  z-index: 400;
+  /* abaixo do cabeçalho (z-index: 1000) */
 }
 
 .leaflet-control-zoom {
@@ -313,11 +321,13 @@ ul#favoritos-lista li {
   padding: 20px;
   font-family: Arial, sans-serif;
   display: flex;
-  flex-direction: column; /* itens um embaixo do outro */
+  flex-direction: column;
+  /* itens um embaixo do outro */
 }
 
 #cardapio-container ul {
-  list-style: none; /* remove as bolinhas */
+  list-style: none;
+  /* remove as bolinhas */
   padding: 0;
 }
 
@@ -353,49 +363,49 @@ ul#favoritos-lista li {
 
 
 
-  
-  /* Cabeçalho */
-  header {
-    background-color: #75856f;
-    color: white;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  header h1 {
-    margin: 0;
-    color: white;
-  }
-  
-  header a {
-    display: block;
-    margin-top: 0.5rem;
-    color: white;
-    text-decoration: none;
-  }
-  
-  main {
-    padding: 1rem;
-  }
-  
-  ul#lista-locais {
-    list-style: none;
-    padding: 0;
-  }
-  
-  ul#lista-locais li {
-    background-color: #ffffff;
-    border: 1px solid #c5e1c5;
-    padding: 1rem;
-    margin-bottom: 0.5rem;
-    border-radius: 8px;
-  }
 
- 
-  /* Remove sublinhado do link e faz ele ocupar toda a largura */
+/* Cabeçalho */
+header {
+  background-color: #75856f;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+header a {
+  display: block;
+  margin-top: 0.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  padding: 1rem;
+}
+
+ul#lista-locais {
+  list-style: none;
+  padding: 0;
+}
+
+ul#lista-locais li {
+  background-color: #ffffff;
+  border: 1px solid #c5e1c5;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 8px;
+}
+
+
+/* Remove sublinhado do link e faz ele ocupar toda a largura */
 .item-link {
   display: block;
   text-decoration: none;
@@ -419,37 +429,37 @@ ul#favoritos-lista li {
 
 /* Botão de Favorito */
 .btn-favorito {
-    background: none; 
-    border: none; 
-    cursor: pointer; 
-    font-size: 1.5rem; 
-    color: #aaa; 
-    transition: color 0.3s; 
-    position: absolute; 
-    top: 1rem; 
-    right: 1rem; 
-    z-index: 2; 
-    padding: 0; 
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #aaa;
+  transition: color 0.3s;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 2;
+  padding: 0;
 }
 
 .btn-favorito.favorito {
-    color: #f3b400; 
+  color: #f3b400;
 }
 
 .item-local {
-    position: relative;
-    padding-right: 2.5rem; 
+  position: relative;
+  padding-right: 2.5rem;
 }
 
 .card-local {
-    position: relative; 
-    padding-right: 2.5rem; 
+  position: relative;
+  padding-right: 2.5rem;
 }
 
 .item-link {
-    display: block; 
-    text-decoration: none;
-    color: inherit;
+  display: block;
+  text-decoration: none;
+  color: inherit;
 }
 
 /* Estilo para página de detalhes */
@@ -530,34 +540,36 @@ ul#favoritos-lista li {
 /* Seção da Caixa de Pesquisa */
 
 #pesquisa {
-    width: calc(100% - 2rem); /* Mantém a largura dinâmica */
-    padding: 0.8rem 1rem; 
-    margin: 0 1rem 1rem 1rem; 
-    
-    border: 1px solid #c5e1c5; 
-    border-radius: 25px; 
-    
-    font-size: 1rem;
-    background-color: white; 
-    color: #333; 
-    
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-    transition: all 0.3s ease-in-out; 
+  width: calc(100% - 2rem);
+  /* Mantém a largura dinâmica */
+  padding: 0.8rem 1rem;
+  margin: 0 1rem 1rem 1rem;
+
+  border: 1px solid #c5e1c5;
+  border-radius: 25px;
+
+  font-size: 1rem;
+  background-color: white;
+  color: #333;
+
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
 }
 
 #pesquisa:focus {
-    border-color: #75856f; 
-    box-shadow: 0 0 0 3px rgba(117, 133, 111, 0.3); 
-    outline: none; 
+  border-color: #75856f;
+  box-shadow: 0 0 0 3px rgba(117, 133, 111, 0.3);
+  outline: none;
 }
 
 #pesquisa::placeholder {
-    color: #888; 
-    opacity: 1; 
+  color: #888;
+  opacity: 1;
 }
 
 #pesquisa:hover {
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); /* Sombra um pouco mais forte ao passar o mouse */
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  /* Sombra um pouco mais forte ao passar o mouse */
 }
 
 /* Responsivo: 2 colunas no desktop */
@@ -574,314 +586,357 @@ ul#favoritos-lista li {
 
 /*Sérgio*/
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 2rem;
-  }
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-  .voltar-link {
-    margin-bottom: 2rem;
-  }
+.voltar-link {
+  margin-bottom: 2rem;
+}
 
-  .voltar-link a {
-    color: #75856f;
-    text-decoration: none;
-    font-size: 1.1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s;
-  }
+.voltar-link a {
+  color: #75856f;
+  text-decoration: none;
+  font-size: 1.1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s;
+}
 
-  .voltar-link a:hover {
-    color: #506266;
+.voltar-link a:hover {
+  color: #506266;
+}
+
+.noticia-detalhada {
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(117, 133, 111, 0.15);
+  overflow: hidden;
+  margin: 3rem auto;
+  max-width: 1200px;
+  padding: 2rem;
+}
+
+.noticia-detalhada .imagem-container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.noticia-detalhada img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  margin: 0 auto;
+  display: block;
+  border: 5px solid #75856f;
+  transition: transform 0.3s ease;
+}
+
+.noticia-detalhada img:hover {
+  transform: scale(1.02);
+}
+
+.noticia-detalhada h2 {
+  color: #75856f;
+  font-size: 2.8rem;
+  margin: 2.5rem 2rem 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: -0.5px;
+}
+
+.noticia-detalhada .data {
+  color: #506266;
+  font-size: 1.3rem;
+  margin: 1rem 2rem 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 3px solid #bcc499;
+  text-align: center;
+  font-weight: 500;
+}
+
+.noticia-detalhada .descricao {
+  line-height: 1.9;
+  color: #506266;
+  font-size: 1.4rem;
+  margin: 2rem 3rem;
+  padding: 0 2rem;
+  text-align: justify;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Mantendo a responsividade para telas menores */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
   }
 
   .noticia-detalhada {
-    background-color: #f9f9f9;
-    border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(117, 133, 111, 0.15);
-    overflow: hidden;
-    margin: 3rem auto;
-    max-width: 1200px;
-    padding: 2rem;
-  }
-
-  .noticia-detalhada .imagem-container {
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-
-  .noticia-detalhada img {
-    width: 100%;
-    height: 600px;
-    object-fit: cover;
-    margin: 0 auto;
-    display: block;
-    border: 5px solid #75856f;
-    transition: transform 0.3s ease;
-  }
-
-  .noticia-detalhada img:hover {
-    transform: scale(1.02);
+    padding: 1rem;
+    margin: 1rem auto;
   }
 
   .noticia-detalhada h2 {
-    color: #75856f;
-    font-size: 2.8rem;
-    margin: 2.5rem 2rem 1.5rem;
-    font-weight: 600;
-    text-align: center;
-    letter-spacing: -0.5px;
+    font-size: 1.5rem;
+    margin: 1.5rem 1rem 1rem;
   }
 
-  .noticia-detalhada .data {
-    color: #506266;
-    font-size: 1.3rem;
-    margin: 1rem 2rem 2rem;
-    padding-bottom: 1.5rem;
-    border-bottom: 3px solid #bcc499;
-    text-align: center;
-    font-weight: 500;
+  .noticia-detalhada img {
+    height: 250px;
   }
 
   .noticia-detalhada .descricao {
-    line-height: 1.9;
-    color: #506266;
-    font-size: 1.4rem;
-    margin: 2rem 3rem;
-    padding: 0 2rem;
-    text-align: justify;
-    max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    font-size: 1.1rem;
+    margin: 1rem;
+    padding: 0 0.5rem;
   }
 
-  /* Mantendo a responsividade para telas menores */
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem;
-    }
-
-    .noticia-detalhada {
-      padding: 1rem;
-      margin: 1rem auto;
-    }
-
-    .noticia-detalhada h2 {
-      font-size: 1.5rem;
-      margin: 1.5rem 1rem 1rem;
-    }
-
-    .noticia-detalhada img {
-      height: 250px;
-    }
-
-    .noticia-detalhada .descricao {
-      font-size: 1.1rem;
-      margin: 1rem;
-      padding: 0 0.5rem;
-    }
-
-    .noticia-detalhada .data {
-      font-size: 1rem;
-      margin: 0.5rem 1rem 1rem;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      padding: 1rem;
-    }
-
-    .noticia-detalhada h2 {
-      font-size: 1.5rem;
-    }
-
-    .noticia-detalhada img {
-      height: 250px;
-    }
-  }
-
-  
-  /* Cabeçalho */
-  header {
-    background-color: #75856f;
-    color: white;
-    padding: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  
-  .icons {
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .icons i {
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s;
-  }
-  
-  /* Ícone clicado */
-  .icons :hover {
-    color: #92a68a;
-  }
-  
-  /* Barra de pesquisa */
-  .search-bar {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    padding: 1rem;
-    background-color: #f2f2f2;
-  }
-  
-  .search-bar input,
-  .search-bar button {
-    padding: 0.5rem;
+  .noticia-detalhada .data {
     font-size: 1rem;
-    color: white;
-    border: none;
-    cursor: pointer;
+    margin: 0.5rem 1rem 1rem;
   }
-  
-  /* Mapa */
-  #map {
-    height: 400px;
-    width: 100%;
-  }
-  
-  /* Rodapé */
-  footer {
-    background-color: #bcc499;
-    color: white;
-    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .container {
     padding: 1rem;
-    margin-top: auto;
   }
 
-  /* Seção Sobre o PUC Maps */
-  .about-app {
-    padding: 2rem 1rem;
-    background-color: #f2f2f2; /* Mesmo fundo da barra de pesquisa para consistência */
+  .noticia-detalhada h2 {
+    font-size: 1.5rem;
   }
 
-  .about-app h2 {
-    font-size: 1.8rem;
-    color: #75856f; /* Cor do cabeçalho para manter o tema */
-    text-align: center;
-    margin-bottom: 1.5rem;
+  .noticia-detalhada img {
+    height: 250px;
   }
+}
 
+
+/* Cabeçalho */
+header {
+  background-color: #75856f;
+  color: white;
+  padding: 2rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.icons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+/* Ícone clicado */
+.icons :hover {
+  color: #92a68a;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1rem;
+  background-color: #f2f2f2;
+}
+
+.search-bar input,
+.search-bar button {
+  padding: 0.5rem;
+  font-size: 1rem;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mapa */
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+/* Rodapé */
+footer {
+  background-color: #bcc499;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Seção Sobre o PUC Maps */
+.about-app {
+  padding: 2rem 1rem;
+  background-color: #f2f2f2;
+  /* Mesmo fundo da barra de pesquisa para consistência */
+}
+
+.about-app h2 {
+  font-size: 1.8rem;
+  color: #75856f;
+  /* Cor do cabeçalho para manter o tema */
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 800px;
+  /* Limita a largura para melhor legibilidade */
+  margin: 0 auto;
+}
+
+.about-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  /* Bordas arredondadas para estética */
+  border: 2px solid #92a68a;
+  /* Borda verde para combinar com o tema */
+}
+
+@media (min-width: 600px) {
   .about-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    max-width: 800px; /* Limita a largura para melhor legibilidade */
-    margin: 0 auto;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
   }
 
   .about-text {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #333;
+    flex: 1;
+    /* O texto ocupa o espaço restante */
   }
 
   .about-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px; /* Bordas arredondadas para estética */
-    border: 2px solid #92a68a; /* Borda verde para combinar com o tema */
+    max-width: 300px;
+    /* Limita o tamanho da imagem em telas maiores */
+  }
+}
+
+
+
+
+
+@media (min-width: 600px) {
+  .search-bar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 
-  @media (min-width: 600px) {
-    .about-content {
-      flex-direction: row;
-      align-items: flex-start;
-      gap: 2rem;
-    }
-
-    .about-text {
-      flex: 1; /* O texto ocupa o espaço restante */
-    }
-
-    .about-content img {
-      max-width: 300px; /* Limita o tamanho da imagem em telas maiores */
-    }
+  .search-bar input {
+    background-color: white;
+    color: black;
+    flex: 1;
+    margin-right: 1rem;
   }
+}
+
+#ok {
+  background-color: rgb(170, 170, 170);
+}
+
+#ok,
+#filtro {
+  cursor: pointer;
+  display: inline;
+  border: 2px solid transparent;
+  border-radius: 5px;
+}
+
+#ok:hover,
+#filtro:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border: 2px solid black;
+}
+
+.filtro {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #7c8f75;
+  color: white;
+  border: 1px solid rgb(24, 22, 22);
+  width: 110px;
+  height: 30px;
+  border-radius: 20px;
+  display: inline-block;
+  padding: 5px 10px;
+  margin: 10px;
+  transition: transform 0.2s ease-in-out;
+  letter-spacing: 1px;
+  /* <-- Espaço entre as letras */
+}
+
+/*Adicionar transição para a barra de filtros abrir*/
+#box {
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: height 0.4s ease, opacity 0.4s ease;
+}
+
+#box.show {
+  height: 100px; /* ajuste para altura real da barra de filtros */
+  opacity: 1;
+}
+
+.filtro:hover {
+  /*Atualizei os botões feitos anteriormente adicionando animação ao passar o mouse*/
+  background-color: #5f6b5a;
+  border: 1px solid rgb(24, 22, 22);
+  transform: scale(1.05);
+}
+
+.sidebar ul li a i {
+  margin-right: 8px;
+  color: #555; /* pode ajustar a cor do ícone */
+}
 
 
+.fundo-bot {
+  justify-content: center; /* Centraliza na horizontal */
+  align-items: center;     /* Centraliza na vertical (se quiser) */
+  background-color: #f2f2f2;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  /* Deixa quebrar linha se não couber */
+  padding: 10px;
+}
 
-
-
-  @media (min-width: 600px) {
-    .search-bar {
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-    }
-  
-    .search-bar input {
-      background-color: white;
-      color:black;
-      flex: 1;
-      margin-right: 1rem;
-    }
-  }
-  #ok{
-    background-color: rgb(170, 170, 170);
-  }
-  #ok, #filtro{
-    cursor: pointer;
-    display: inline ;
-    border: 2px solid transparent;
-    border-radius: 5px;
-  }
-  #ok:hover,  #filtro:hover{
-    transform: scale(1.05);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    border: 2px solid black;
-  }
-
-  .filtro{
-    background-color: #f2f2f2;
-    border: 1px solid gray;
-    width: 110px;
-    height:20px;
-    border-radius: 20px;
-    margin: 0.3rem 0.2rem 0.5rem 1rem;
-    transition: transform 0.2s ease-in-out;
-  }
-  .filtro:hover{ /*Atualizei os botões feitos anteriormente adicionando animação ao passar o mouse*/
-    background-color: #b7b7b7;
-    border: 1px solid rgb(99, 99, 99);
-    transform: scale(1.05);
-  }
-  .fundo-bot{
-    background-color:#f2f2f2 ;
-  }
-
-  #box {
-    display: none;
-  }
-
-  /* Botão do menu */
+/* Botão do menu */
 .menu-icon {
   position: fixed;
   top: 20px;
@@ -895,7 +950,8 @@ ul#favoritos-lista li {
 .sidebar {
   position: fixed;
   top: 0;
-  left: -250px; /* Escondida inicialmente */
+  left: -250px;
+  /* Escondida inicialmente */
   width: 250px;
   height: 100%;
   background-color: #999b94;
@@ -933,17 +989,21 @@ ul#favoritos-lista li {
 }
 
 .menu-icon i {
-  color: white; /* ou qualquer cor: #000, red, blue, etc */
+  color: white;
+  /* ou qualquer cor: #000, red, blue, etc */
 }
 
 #sidebar {
-  position: fixed; /* ou absolute, dependendo do seu layout */
-  z-index: 1100;  /* valor alto para ficar na frente */
+  position: fixed;
+  /* ou absolute, dependendo do seu layout */
+  z-index: 1100;
+  /* valor alto para ficar na frente */
   /* outros estilos como largura, altura, top, left */
 }
 
 .leaflet-control-container {
-  z-index: 800; /* padrão do Leaflet */
+  z-index: 800;
+  /* padrão do Leaflet */
 }
 
 .avaliacao-container {
@@ -993,18 +1053,22 @@ ul#favoritos-lista li {
   background-color: #9ac3ab;
 }
 
-.card-local{  /*card da pagina de lista de lugares*/
+.card-local {
+  /*card da pagina de lista de lugares*/
   background-color: #d0d0d0;
   margin-top: 0.5%;
   text-indent: 10px;
 }
 
-.card-rest{ /*card de restaurantes*/
+.card-rest {
+  /*card de restaurantes*/
   background-color: #b4c3af;
   margin: 1% 7%;
   transition: transform 0.2s ease-in-out;
 }
-.card-rest a{  /*link do card restaurante*/
+
+.card-rest a {
+  /*link do card restaurante*/
   text-decoration: none;
   color: black;
   padding-left: 1%;
@@ -1014,26 +1078,32 @@ ul#favoritos-lista li {
   font-weight: bold;
 }
 
-.card-rest:hover{  /*card restaurante quando o mouse passar por cima*/
+.card-rest:hover {
+  /*card restaurante quando o mouse passar por cima*/
   color: black;
   background-color: #a2c398;
   border: 1px solid black;
   font-weight: bold;
   transform: scale(1.05);
 }
-.cards-rest{ /*evitar as caracteristicas vindas do main{ }, que tornava diferente o style da pagina restaurante*/
+
+.cards-rest {
+  /*evitar as caracteristicas vindas do main{ }, que tornava diferente o style da pagina restaurante*/
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-.rests{ /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
+
+.rests {
+  /*evitar as caracteristicas vindas do body{ }, que tornava diferente o style da pagina restaurante*/
   background-color: #d0d0d0;
 }
+
 #searchbar {
   cursor: text;
 }
 
-.mudarcentro li { 
+.mudarcentro li {
   text-align: start;
   padding: 0;
 }

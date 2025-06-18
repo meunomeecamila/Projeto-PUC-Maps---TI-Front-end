@@ -2,18 +2,15 @@
 const map = L.map('map', {
   center: [-19.9227917, -43.9925170],
   zoom: 16,
-  zoomControl: false // desativa os controles padrão
+  zoomControl: false
 });
 
-// Adiciona os botões de zoom no canto superior direito
 L.control.zoom({
-  position: 'topleft' // posições: 'topleft', 'topright', 'bottomleft', 'bottomright'
+  position: 'topleft'
 }).addTo(map);
 
-// Adiciona os tiles
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-  attribution:
-    '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
 const GrupoDeMarcadores = L.layerGroup().addTo(map);
@@ -39,13 +36,11 @@ document.querySelectorAll('.icons i').forEach(icon => {
   });
 });
 
-
-
-
-
-function normalizarTexto(texto) {   // letras maiusculas e acentos
+// Função para normalizar texto (retira acentos e caixa alta)
+function normalizarTexto(texto) {
   return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
 }
+
 var filtro = '';
 
 const botaoFiltro = document.getElementById("filtro");
@@ -55,10 +50,12 @@ const bot3 = document.getElementById("entretenimento");
 const bot4 = document.getElementById("ajuda");
 const box = document.getElementById("box");
 
-botaoFiltro.onclick = function () {
-  box.style.display = box.style.display === "block" ? "none" : "block";
-}
+// 🔥 Transição suave na aba de filtros
+botaoFiltro.addEventListener('click', () => {
+  box.classList.toggle('show');
+});
 
+// Filtros dos botões
 bot1.addEventListener("click", async function () {
   filtro = "Prédio";
   await buscarFiltro(filtro);
@@ -76,6 +73,7 @@ bot4.addEventListener("click", async function () {
   await buscarFiltro(filtro);
 });
 
+// Função para buscar pelo filtro
 async function buscarFiltro(filtro) {
   const data = await fetch('../locais.json');
   const locais = await data.json();
@@ -83,19 +81,21 @@ async function buscarFiltro(filtro) {
 
   const filtroNormalizado = normalizarTexto(filtro);
 
-const locaisFiltrados = locais.filter(local => 
-  normalizarTexto(local.filtro) === filtroNormalizado
-);
+  const locaisFiltrados = locais.filter(local =>
+    normalizarTexto(local.filtro) === filtroNormalizado
+  );
 
-locaisFiltrados.forEach(local => {
-  L.marker(local.coords)
-    .addTo(GrupoDeMarcadores)
-    .bindPopup(local.nome);
-});
+  locaisFiltrados.forEach(local => {
+    L.marker(local.coords)
+      .addTo(GrupoDeMarcadores)
+      .bindPopup(local.nome);
+  });
 
-  box.style.display = box.style.display === "block" ? "none" : "block";
+  // Fecha a aba de filtros após escolher
+  box.classList.remove('show');
 }
 
+// 🔍 Pesquisa digitada
 var digitado = '';
 
 async function buscarLocal() {
@@ -112,7 +112,7 @@ async function buscarLocal() {
         .bindPopup(local.nome);
     });
   } else {
-    const localEncontrado = locais.find(local => 
+    const localEncontrado = locais.find(local =>
       normalizarTexto(local.nome) === digitadoNormalizado
     );
 
@@ -128,6 +128,7 @@ async function buscarLocal() {
   }
 }
 
+// Eventos da barra de pesquisa
 const searchbar = document.getElementById("searchbar");
 const OKbutton = document.getElementById('ok');
 
@@ -138,13 +139,14 @@ OKbutton.addEventListener("click", async function () {
 searchbar.addEventListener("input", async function (e) {
   digitado = e.target.value;
 });
-searchbar.addEventListener("keydown", async function(e) {
+searchbar.addEventListener("keydown", async function (e) {
   if (e.key === "Enter") {
     e.preventDefault();
     await buscarLocal();
   }
 });
 
+// Sidebar
 document.addEventListener('DOMContentLoaded', () => {
   const sidebar = document.getElementById('sidebar');
   const menuIcon = document.getElementById('menu-icon');

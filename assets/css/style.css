@@ -755,7 +755,6 @@ ul#favoritos-lista li {
   .search-bar button {
     padding: 0.5rem;
     font-size: 1rem;
-    background-color: #92a68a;
     color: white;
     border: none;
     cursor: pointer;

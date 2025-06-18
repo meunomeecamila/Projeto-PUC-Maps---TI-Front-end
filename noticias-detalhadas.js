@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   main.innerHTML = `
     <div class="noticia-detalhada">
       <div class="imagem-container">
-        <img src="${noticia.imagem}" alt="${noticia.titulo}" class="noticia-img">
+        <img src="${noticia.imagem2}" alt="${noticia.titulo}" class="noticia-img">
       </div>
       <h2>${noticia.titulo}</h2>
       <p class="data">${noticia.data}</p>

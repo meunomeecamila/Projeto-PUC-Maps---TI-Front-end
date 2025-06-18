@@ -15,7 +15,7 @@
         "Folhado de queijo - R$ 13,80",
         "Bauru assado - R$ 15,00"
       ],
-       "Doces": [
+      "Doces": [
         "Brigadeiro (25 unidades) - R$ 42,25",
         "Beijinho recheado com Nutella (25 unidades) - R$ 79,00",
         "Docinho de Churros (25 unidades)- R$ 50,75",
@@ -24,7 +24,7 @@
         "Brigadeiro de Colher (25 unidades)- R$ 92,25",
         "Brigadeiro Oreo (25 unidades)- R$ 54,00"
       ],
-       "Tortas Doces": [
+      "Tortas Doces": [
         "Torta Boca do Forno - R$ 93,00",
         "Torta Bolo de Limão - R$ 93,00",
         "Torta Mousse de Limão - R$ 106,00",
@@ -57,6 +57,175 @@
         "Chocolate Quente - R$ 10,95",
         "Cappuccino - R$ 10,95",
         "Cappuccino Suiço - R$ 12,95"
+      ]
+    }
+  },
+  {
+    "id": "lanchonetedce",
+    "nome": "Lanchonete DCE",
+    "cardapio": {
+      "Salgados": [
+        "Coxinha - R$ 6,00",
+        "Enrrolado de salsinsha - R$ 6,00",
+        "Pão de queijo - R$ 4,50",
+        "Empada - R$ 6,00"
+      ],
+      "Bebidas": [
+        "Refresco - R$ 4,00",
+        "Café - R$ 2,00",
+        "Café com leite - R$ 2,50",
+        "Refrigerante - R$ 5,00"
+      ],
+      "Almoço": [
+        "Prato pequeno - R$ 15,90",
+        "Prato grande - R$ 19,90"
+      ]
+    }
+  },
+  {
+    "id": "saborartt",
+    "nome": "Lanchonete Saborartt",
+    "cardapio": {
+      "Matinais": [
+        "Café - R$ 2,50",
+        "Café com leite - R$ 3,50",
+        "Pingado - R$ 3,50",
+        "Copo de leite - R$ 1,50",
+        "Achocolatado - R$ 5,00",
+        "Chá variados - R$ 5,00"
+      ],
+      "Bebidas em Geral": [
+        "Refrigerantes (lata) - R$ 5,00",
+        "Água s/gás - R$ 3,00",
+        "Água c/gás - R$ 3,00",
+        "Refresco (300 ml) - R$ 3,00",
+        "Suco de Laranja (400 ml) - R$ 5,00",
+        "Suco de polpa de frutas (500 ml) - R$ 6,00",
+        "Água de Coco Natural - R$ 7,00"
+      ],
+      "Vitaminas": [
+        "Banana com aveia - R$ 8,00",
+        "Mamão - R$ 8,00",
+        "Abacate - R$ 8,00",
+        "Frutas - R$ 9,00"
+      ],
+      "Creme de açaí": [
+        "Açaí de 300 ml - R$ 13,00",
+        "Açaí de 500 ml - R$ 15,00",
+        "Açaí de 700 ml - R$ 19,00",
+        "Suco de Açaí c/ água - R$ 8,00",
+        "Acréscimo - R$ 2,00"
+      ],
+      "Vitamina de açaí": [
+        "Açaí com morango - R$ 15,00",
+        "Açaí com banana - R$ 13,00",
+        "Açaí com frutas - R$ 13,00",
+        "Açaí com leite - R$ 9,00"
+      ],
+      "Salgados": [
+        "Pão de Queijo - R$ 5,00",
+        "Empada - R$ 6,00",
+        "Folheado - R$ 6,50",
+        "Pão de Batata - R$ 7,00",
+        "Coxinha Comum - R$ 8,00",
+        "Coxinha com Catupiry - R$ 6,00",
+        "Quibe - R$ 6,00",
+        "Pastel Assado - preço não informado",
+        "Biscoito de queijo - preço não informado",
+        "Misto Quente - preço não informado",
+        "Enrolado Presunto e Queijo - R$ 6,00",
+        "Enrolado de Salsicha de Milho - R$ 6,00",
+        "Enrolado Recheado - R$ 6,00"
+      ],
+      "Espaço Light": [
+        "Sanduíche Natural - preço não informado",
+        "Salada de frutas - preço não informado",
+        "Yakult - preço não informado"
+      ]
+    }
+  },
+  {
+    "id": "saborpraca",
+    "nome": "Sabor Praça",
+    "cardapio": {
+      "Salgados": [
+        "Pão de Queijo / Palito de Queijo - R$ 3,70",
+        "Pão de Queijo Recheado - R$ 5,50",
+        "Pão de Queijo Coquetel (8 Unidades) - R$ 5,50",
+        "Salgado Simples (Kibe, Coxinha, Risole) - R$ 7,00",
+        "Enrolados, Esfihas, Pastel Assado - R$ 8,00",
+        "Hamburgão / Tortinha - R$ 8,00",
+        "Salgado Especial (Empadas, Pão de Batata e Coxinha de Catupiry) - R$ 7,50",
+        "Coxinha de Catupiry - R$ 7,00"
+      ],
+      "Bebidas": [
+        "Capuccino Máquina - R$ 6,50",
+        "Capuccino Sachê - R$ 2,00",
+        "Cafezinho - R$ 2,00",
+        "Café Expresso - R$ 5,00",
+        "Suco Natural Laranja 300 ml - R$ 8,00"
+      ],
+      "Sanduíches e Lanches": [
+        "Sanduíche Artesanal - R$ 12,00",
+        "Sanduíche Mania Lanches - R$ 15,00"
+      ],
+      "Sobremesas": [
+        "Bolo no Pote - R$ 12,00",
+        "Salada de Frutas 300 ml - R$ 8,00"
+      ],
+      "Outros": [
+        "Misto - R$ 7,00"
+      ]
+    }
+  },
+  {
+    "id": "cantinaschuffner",
+    "nome": "Cantina Schuffner",
+    "cardapio": {
+      "Salgados": [
+        "Salgado Comum - R$ 7,30",
+        "Empada 4 Queijos - R$ 7,30",
+        "Empada Frango com Requeijão - R$ 7,30",
+        "Folhado de Frango - R$ 9,00",
+        "Coxinha com Catupiry - R$ 8,50",
+        "Tortinha de Frango - R$ 8,50",
+        "Hamburgão - R$ 9,00",
+        "Pão Batata com Catupiry - R$ 9,00",
+        "Pão de Queijo - R$ 4,50",
+        "Biscoito de Queijo - R$ 9,00",
+        "Pão de Queijo Recheado - R$ 9,00",
+        "Pão com Manteiga - R$ 5,00",
+        "Bolo - preço não informado"
+      ],
+      "Bebidas": [
+        "Refresco (copo 300ml) - R$ 4,50",
+        "Refresco (copo 500ml) - R$ 5,00",
+        "Refrigerante (copo 300ml) - R$ 5,90",
+        "Refrigerante (copo 500ml) - R$ 7,00",
+        "Vitaminas - R$ 9,00",
+        "Suco de Laranja - R$ 8,00",
+        "Limonada Suíça - R$ 8,00",
+        "Suco Polpa - R$ 8,00",
+        "Mate Leão (copo) - R$ 6,90",
+        "Água sem Gás - R$ 4,00",
+        "Água com Gás - R$ 4,50",
+        "Cafezinho - R$ 3,00",
+        "Café com Leite - R$ 3,50",
+        "Capuccino - R$ 9,90",
+        "Café Expresso - R$ 8,80"
+      ],
+      "Sanduíches": [
+        "Misto Quente - R$ 9,90",
+        "Pão com Queijo - R$ 9,90",
+        "Hambúrguer - R$ 11,00",
+        "X-Burguer - R$ 11,00",
+        "X-Egg Burguer - R$ 12,00",
+        "X-Tudo - R$ 22,00",
+        "X-Bacon Burguer - R$ 11,00",
+        "Pão com Linguiça - R$ 8,50",
+        "Pão com Ovo - R$ 8,50",
+        "Sanduíche Natural - R$ 8,50",
+        "Sanduíche Patê de Frango (peq) - R$ 8,50"
       ]
     }
   }

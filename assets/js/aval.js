@@ -1,47 +1,53 @@
-// aval.js
 document.addEventListener('DOMContentLoaded', function () {
-  const API_URL = '../assets/json/aval.json';
   const form = document.getElementById('avaliacaoForm');
   const mensagem = document.getElementById('mensagem');
 
-  // Função para listar avaliações na tabela
-  function carregarAvaliacoes() {
-    fetch(API_URL)
-      .then(res => res.json())
-      .then(avals => {
-        const tbody = document.querySelector('tbody');
-        if (!tbody) return;
-        tbody.innerHTML = '';
-
-        avals.forEach(aval => {
-          const tr = document.createElement('tr');
-          tr.innerHTML = `
-            <td>${aval.nome}</td>
-            <td>${aval.curso}</td>
-            <td>${aval.periodo}</td>
-            <td>${aval.nota}</td>
-            <td>${aval.comentario}</td>
-            <td>
-              <button onclick="editarAval(${aval.id})">Editar</button>
-              <button onclick="deletarAval(${aval.id})">Excluir</button>
-            </td>
-          `;
-          tbody.appendChild(tr);
-        });
-      })
-      .catch(err => {
-        console.error('Erro ao carregar avaliações:', err);
-        mensagem.textContent = "Erro ao carregar avaliações.";
-        mensagem.style.color = 'red';
-      });
+  // Função para obter as avaliações do Local Storage
+  function getAvaliacoes() {
+    return JSON.parse(localStorage.getItem('avaliacoes')) || [];
   }
 
-  // Evento do formulário para enviar nova avaliação (POST)
+  // Função para salvar as avaliações no Local Storage
+  function setAvaliacoes(avals) {
+    localStorage.setItem('avaliacoes', JSON.stringify(avals));
+  }
+
+  // Função para gerar um ID único
+  function gerarId() {
+    return Date.now();
+  }
+
+  // Função para listar avaliações na tabela
+  function carregarAvaliacoes() {
+    const avals = getAvaliacoes();
+    const tbody = document.querySelector('tbody');
+    if (!tbody) return;
+    tbody.innerHTML = '';
+
+    avals.forEach(aval => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td>${aval.nome}</td>
+        <td>${aval.curso}</td>
+        <td>${aval.periodo}</td>
+        <td>${aval.nota}</td>
+        <td>${aval.comentario}</td>
+        <td>
+          <button onclick="editarAval(${aval.id})">Editar</button>
+          <button onclick="deletarAval(${aval.id})">Excluir</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+  }
+
+  // Evento do formulário para enviar nova avaliação
   if (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
 
       const novaAval = {
+        id: gerarId(),
         nome: form.nome.value.trim(),
         curso: form.curso.value.trim(),
         periodo: form.periodo.value.trim(),
@@ -49,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
         comentario: form.comentario.value.trim()
       };
 
-      // Validação simples
+      // Validação
       if (
         !novaAval.nome ||
         !novaAval.curso ||
@@ -63,78 +69,64 @@ document.addEventListener('DOMContentLoaded', function () {
         return;
       }
 
-      fetch(API_URL, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(novaAval)
-      })
-        .then(res => {
-          if (!res.ok) throw new Error('Erro ao enviar avaliação.');
-          return res.json();
-        })
-        .then(() => {
-          mensagem.textContent = "Avaliação enviada com sucesso!";
-          mensagem.style.color = "green";
-          form.reset();
-          carregarAvaliacoes();
-        })
-        .catch(err => {
-          console.error(err);
-          mensagem.textContent = "Erro ao enviar avaliação. Tente novamente.";
-          mensagem.style.color = "red";
-        });
+      const avals = getAvaliacoes();
+      avals.push(novaAval);
+      setAvaliacoes(avals);
+
+      mensagem.textContent = "Avaliação enviada com sucesso!";
+      mensagem.style.color = "green";
+      form.reset();
+      carregarAvaliacoes();
     });
   }
 
-  // Função global para editar avaliação (PATCH)
+  // Função global para editar avaliação
   window.editarAval = function (id) {
-    const nome = prompt("Novo nome:");
-    const curso = prompt("Novo curso:");
-    const periodo = prompt("Novo período:");
-    const nota = prompt("Nova nota (0 a 10):");
-    const comentario = prompt("Novo comentário:");
+    const avals = getAvaliacoes();
+    const index = avals.findIndex(a => a.id === id);
+    if (index === -1) return;
 
-    const dadosAtualizados = {
-      nome,
-      curso,
-      periodo,
-      nota: parseInt(nota),
+    const nome = prompt("Novo nome:", avals[index].nome);
+    const curso = prompt("Novo curso:", avals[index].curso);
+    const periodo = prompt("Novo período:", avals[index].periodo);
+    const nota = prompt("Nova nota (0 a 10):", avals[index].nota);
+    const comentario = prompt("Novo comentário:", avals[index].comentario);
+
+    if (
+      nome && curso && periodo &&
+      !isNaN(parseInt(nota)) && parseInt(nota) >= 0 && parseInt(nota) <= 10 &&
       comentario
-    };
-
-    fetch(`${API_URL}/${id}`, {
-      method: 'PATCH',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(dadosAtualizados)
-    })
-      .then(() => {
-        alert('Avaliação atualizada!');
-        carregarAvaliacoes();
-      })
-      .catch(err => {
-        console.error('Erro ao atualizar avaliação:', err);
-        alert('Erro ao atualizar avaliação.');
-      });
+    ) {
+      avals[index] = {
+        ...avals[index],
+        nome,
+        curso,
+        periodo,
+        nota: parseInt(nota),
+        comentario
+      };
+      setAvaliacoes(avals);
+      alert('Avaliação atualizada!');
+      carregarAvaliacoes();
+    } else {
+      alert('Dados inválidos. Edição cancelada.');
+    }
   };
 
-  // Função global para deletar avaliação (DELETE)
+  // Função global para deletar avaliação
   window.deletarAval = function (id) {
     if (confirm('Tem certeza que deseja excluir esta avaliação?')) {
-      fetch(`${API_URL}/${id}`, { method: 'DELETE' })
-        .then(() => {
-          alert('Avaliação excluída!');
-          carregarAvaliacoes();
-        })
-        .catch(err => {
-          console.error('Erro ao excluir avaliação:', err);
-          alert('Erro ao excluir avaliação.');
-        });
+      const avals = getAvaliacoes().filter(aval => aval.id !== id);
+      setAvaliacoes(avals);
+      alert('Avaliação excluída!');
+      carregarAvaliacoes();
     }
   };
 
   // Carrega as avaliações ao abrir a página
   carregarAvaliacoes();
 });
+
 
 // Barra Lateral
 document.addEventListener('DOMContentLoaded', () => {

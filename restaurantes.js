@@ -29,3 +29,18 @@ async function load() {
     }
 }
 load();
+
+// Barra Lateral
+document.addEventListener('DOMContentLoaded', () => {
+  const sidebar = document.getElementById('sidebar');
+  const menuIcon = document.getElementById('menu-icon');
+  const closeBtn = document.getElementById('close-sidebar');
+
+  menuIcon.addEventListener('click', () => {
+    sidebar.style.left = '0';
+  });
+
+  closeBtn.addEventListener('click', () => {
+    sidebar.style.left = '-250px';
+  });
+});

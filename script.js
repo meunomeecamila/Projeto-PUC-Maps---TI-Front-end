@@ -160,3 +160,22 @@ document.addEventListener('DOMContentLoaded', () => {
     sidebar.style.left = '-250px';
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    const authLink = document.getElementById('authLink');
+    const loggedInUser = localStorage.getItem('loggedInUser');
+
+    if (loggedInUser) {
+        authLink.innerHTML = `<i class="fas fa-sign-out-alt" title="Logout"></i>`;
+        authLink.href = "#";
+        authLink.addEventListener('click', function() {
+            localStorage.removeItem('loggedInUser');
+            alert('Logout realizado!');
+            window.location.href = 'login.html';
+        });
+    } else {
+        authLink.innerHTML = `<i class="fas fa-sign-in-alt" title="Login"></i>`;
+        authLink.href = "login.html";
+    }
+});

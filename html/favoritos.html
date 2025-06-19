@@ -10,6 +10,16 @@
 </head>
 <body>
   <header>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+    const loggedInUser = localStorage.getItem('loggedInUser');
+    if (!loggedInUser) {
+        alert('Você precisa estar logado para acessar os favoritos!');
+        window.location.href = 'login.html'; // Redireciona para o login
+    }
+});
+
+    </script>
     <h1>PUC Maps - Favoritos</h1>
     <div class="icons">
       <a href="index.html"><i class="fas fa-home"></i></a>

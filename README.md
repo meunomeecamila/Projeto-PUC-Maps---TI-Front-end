@@ -31,6 +31,3 @@ O sistema tem como objetivo disponibilizar um **mapa interativo** do campus, fac
 - **JSON** — organização e integração dos dados.  
 
 ---
-1. Clone este repositório:
-   ```bash
-   git clone https://git
